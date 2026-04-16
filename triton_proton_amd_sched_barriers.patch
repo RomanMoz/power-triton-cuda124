@@ -1,0 +1,13 @@
+--- a/third_party/proton/Dialect/triton_proton.cc
++++ b/third_party/proton/Dialect/triton_proton.cc
+@@ -108,8 +108,10 @@
+ #endif
+   ADD_PASS_WRAPPER_0("add_allocate_proton_shared_memory",
+                      proton::gpu::createAllocateProtonSharedMemoryPass);
+   ADD_PASS_WRAPPER_0("add_schedule_buffer_store",
+                      proton::gpu::createScheduleBufferStorePass);
++#if TRITON_HAS_AMD_BACKEND
+   ADD_PASS_WRAPPER_0("add_sched_barriers",
+                      proton::gpu::createAddSchedBarriersPass);
++#endif
+ }

@@ -1,0 +1,5 @@
+if(EXISTS "/home/powerai/triton/unittest/Dialect/TritonGPU/TestSwizzling[1]_tests.cmake")
+  include("/home/powerai/triton/unittest/Dialect/TritonGPU/TestSwizzling[1]_tests.cmake")
+else()
+  add_test(TestSwizzling_NOT_BUILT TestSwizzling_NOT_BUILT)
+endif()

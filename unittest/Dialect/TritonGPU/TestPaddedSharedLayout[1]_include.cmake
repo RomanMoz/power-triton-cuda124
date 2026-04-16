@@ -1,0 +1,5 @@
+if(EXISTS "/home/powerai/triton/unittest/Dialect/TritonGPU/TestPaddedSharedLayout[1]_tests.cmake")
+  include("/home/powerai/triton/unittest/Dialect/TritonGPU/TestPaddedSharedLayout[1]_tests.cmake")
+else()
+  add_test(TestPaddedSharedLayout_NOT_BUILT TestPaddedSharedLayout_NOT_BUILT)
+endif()

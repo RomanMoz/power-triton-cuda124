@@ -1,0 +1,24 @@
+#!/bin/bash
+
+export CUDA_HOME=/usr/local/cuda-12.4
+
+export TRITON_PTXAS_PATH=$CUDA_HOME/bin/ptxas
+export TRITON_PTXAS_BLACKWELL_PATH=$CUDA_HOME/bin/ptxas
+export TRITON_CUOBJDUMP_PATH=$CUDA_HOME/bin/cuobjdump
+export TRITON_NVDISASM_PATH=$CUDA_HOME/bin/nvdisasm
+
+export TRITON_CUDACRT_PATH=$CUDA_HOME/include
+export TRITON_CUDART_PATH=$CUDA_HOME/include
+
+# CUPTI
+export TRITON_CUPTI_INCLUDE_PATH=$CUDA_HOME/extras/CUPTI/include
+export TRITON_CUPTI_LIB_PATH=$CUDA_HOME/extras/CUPTI/lib64
+export TRITON_CUPTI_LIB_BLACKWELL_PATH=$CUDA_HOME/extras/CUPTI/lib64
+
+export TRITON_CUDA_STDLIB_PATH=$CUDA_HOME/include
+
+export LLVM_BUILD_DIR=/home/powerai/llvm-project/build
+export LLVM_INCLUDE_DIRS=$LLVM_BUILD_DIR/include
+export LLVM_LIBRARY_DIR=$LLVM_BUILD_DIR/lib
+export LLVM_SYSPATH=$LLVM_BUILD_DIR
+

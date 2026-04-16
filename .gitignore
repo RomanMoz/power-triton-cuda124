@@ -1,0 +1,17 @@
+_deps/
+build/
+.nlohmann-prefix/
+dist/
+*.egg-info/
+__pycache__/
+*.pyc
+compile_commands.json
+build.ninja
+Makefile
+CTestTestfile.cmake
+DartConfiguration.tcl
+cmake_install.cmake
+Testing/
+tablegen_compile_commands.yml
+*.so
+*.so.*

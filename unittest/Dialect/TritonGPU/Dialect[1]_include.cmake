@@ -1,0 +1,5 @@
+if(EXISTS "/home/powerai/triton/unittest/Dialect/TritonGPU/Dialect[1]_tests.cmake")
+  include("/home/powerai/triton/unittest/Dialect/TritonGPU/Dialect[1]_tests.cmake")
+else()
+  add_test(Dialect_NOT_BUILT Dialect_NOT_BUILT)
+endif()

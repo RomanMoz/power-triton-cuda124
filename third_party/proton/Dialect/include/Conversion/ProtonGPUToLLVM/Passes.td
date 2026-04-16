@@ -1,0 +1,19 @@
+#ifndef PROTONGPU_TO_LLVM_PASSES
+#define PROTONGPU_TO_LLVM_PASSES
+
+include "mlir/Pass/PassBase.td"
+
+def AllocateProtonSharedMemoryPass : Pass<"allocate-proton-shared-memory", "mlir::ModuleOp"> {
+    let summary = "Update metadata for proton shared memory allocation";
+    let description = [{
+      This pass updates the amount of shared/local memory used by
+      proton intra kernel profiling.
+     }];
+
+    let dependentDialects = ["ProtonDialect",
+                             "gpu::ProtonGPUDialect"];
+}
+
+
+#endif // PROTONGPU_TO_LLVM_PASSES
+// BUILDTRITON_PATCH_NO_AMD_PASSES_TD

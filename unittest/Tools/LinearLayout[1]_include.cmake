@@ -1,0 +1,5 @@
+if(EXISTS "/home/powerai/triton/unittest/Tools/LinearLayout[1]_tests.cmake")
+  include("/home/powerai/triton/unittest/Tools/LinearLayout[1]_tests.cmake")
+else()
+  add_test(LinearLayout_NOT_BUILT LinearLayout_NOT_BUILT)
+endif()

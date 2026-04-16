@@ -1,0 +1,5 @@
+if(EXISTS "/home/powerai/triton/unittest/Dialect/TritonGPU/LinearLayoutConversions[1]_tests.cmake")
+  include("/home/powerai/triton/unittest/Dialect/TritonGPU/LinearLayoutConversions[1]_tests.cmake")
+else()
+  add_test(LinearLayoutConversions_NOT_BUILT LinearLayoutConversions_NOT_BUILT)
+endif()

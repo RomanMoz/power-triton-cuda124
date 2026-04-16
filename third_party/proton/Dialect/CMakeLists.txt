@@ -1,0 +1,13 @@
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
+include_directories(${CMAKE_CURRENT_BINARY_DIR}/include)
+add_subdirectory(include)
+add_subdirectory(lib)
+if(TRITON_BUILD_PYTHON_MODULE)
+ set(_proton_plugin_libs ProtonToProtonGPU ProtonGPUToLLVM ProtonNVIDIAGPUToLLVM ProtonAnalysis)
+ if("amd" IN_LIST TRITON_CODEGEN_BACKENDS)
+   list(APPEND _proton_plugin_libs ProtonAMDGPUToLLVM)
+ endif()
+ add_triton_plugin(TritonProton ${CMAKE_CURRENT_SOURCE_DIR}/triton_proton.cc LINK_LIBS ${_proton_plugin_libs})
+ target_link_libraries(TritonProton PRIVATE Python3::Module pybind11::headers)
+endif()
+# BUILDTRITON_PATCH_NO_AMD

@@ -1,0 +1,5 @@
+if(EXISTS "/home/powerai/triton/unittest/Dialect/TritonGPU/DumpLayoutTest[1]_tests.cmake")
+  include("/home/powerai/triton/unittest/Dialect/TritonGPU/DumpLayoutTest[1]_tests.cmake")
+else()
+  add_test(DumpLayoutTest_NOT_BUILT DumpLayoutTest_NOT_BUILT)
+endif()
