@@ -2,7 +2,7 @@
 export USE_CUDA=1
 export USE_CUDNN=1
 export USE_CUFILE=0
-export CUDA_HOME=/usr/local/cuda-12.4    # свой путь к toolkit
+export CUDA_HOME=/usr/local/cuda-12.4    # path to toolkit
 export CUDA_PATH="${CUDA_HOME}"
 export PATH="${CUDA_HOME}/bin:${PATH}"
 export LD_LIBRARY_PATH="${CUDA_HOME}/lib64:${LD_LIBRARY_PATH}"
